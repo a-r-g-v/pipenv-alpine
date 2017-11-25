@@ -1,7 +1,7 @@
 # Using lightweight alpine image
-FROM python:3.6-alpine
+FROM python:2.7.14-alpine3.6
 
-MAINTAINER vaultvulp
+MAINTAINER argvc
 
 RUN apk update \
         && apk add --no-cache git openssh-client \
