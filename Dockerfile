@@ -4,7 +4,7 @@ FROM python:2.7.14-alpine3.6
 MAINTAINER argvc
 
 RUN apk update \
-        && apk add --no-cache git openssh-client curl \
+        && apk add --no-cache git openssh-client curl gcc g++ make libffi-dev openssl-dev \
         && pip install pipenv \
         && addgroup -S -g 1001 app \
         && adduser -S -D -h /app -u 1001 -G app app
